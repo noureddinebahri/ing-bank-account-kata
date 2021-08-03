@@ -1,0 +1,50 @@
+<div class="col-md-12 depositMoney-container">
+	<h2 class="text-center">Deposit Money</h2>
+	<form [formGroup]="addForm" (ngSubmit)="onSubmit()">
+		<div class="form-group">
+		<table>
+			<tr hidden>
+				<td><label for="id">Id:</label></td>
+				<td><input formControlName="id" name="id" class="form-control" id="id"></td>
+						
+				<td colspan="6"></td>
+			</tr>
+			<tr>
+				<td><label for="amount" style="width: 100px;">Amount :</label></td>
+				<td><input formControlName="amount" name="amount" class="form-control" id="amount"></td>
+
+				<td><label for="currency" style="width: 100px;">Currency :</label></td>
+				<td><input formControlName="currency" name="currency" class="form-control" id="currency"></td>
+
+				<td><label for="reference" style="width: 100px;">Reference :</label></td>
+				<td><input formControlName="reference" name="reference" class="form-control" id="reference"></td>
+
+				<td><label for="operationDate" style="width: 100px;">Operation Date :</label></td>
+				<td><input formControlName="operationDate" name="operationDate" class="form-control" id="operationDate"></td>
+			</tr>
+			<tr>
+				<td><label for="codeBanque" style="width: 100px;">Code Banque :</label></td>
+				<td><input formControlName="codeBanque" name="codeBanque" class="form-control" id="codeBanque"></td>
+
+				<td><label for="codeAgence" style="width: 100px;">Code Agence :</label></td>
+				<td><input formControlName="codeAgence" name="codeAgence" class="form-control" id="codeAgence"></td>
+
+				<td><label for="numeroDeCompte" style="width: 100px;">Numéro de Compte :</label></td>
+				<td><input formControlName="numeroDeCompte" name="numeroDeCompte" class="form-control" id="numeroDeCompte"></td>
+						
+				<td colspan="2"></td>
+			</tr>
+    
+		<!--
+		</table>
+		<table>
+		-->
+			<tr>
+				<td><button class="btn btn-success" style="margin-bottom: 5px;" [disabled]="addForm.invalid">Deposit Money</button></td>
+				<td><button class="btn btn-success" style="margin-bottom: 5px;" (click)="cancel()">Cancel</button></td>
+			</tr>
+		</table>
+	</div>
+	</form>
+</div>
+

@@ -1,0 +1,12 @@
+
+.user-container {
+  display: flex;
+  flex-direction: column;
+  margin: auto;
+}
+.offer-container
+{
+  display: flex;
+  flex-direction: column;
+  margin: auto;
+}

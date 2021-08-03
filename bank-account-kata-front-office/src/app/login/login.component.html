@@ -1,0 +1,32 @@
+<div class="row">
+
+  <div class="col-md-6 login-container">
+    <h2 style="margin: auto">Login</h2>
+    <form [formGroup]="loginForm" (ngSubmit)="onSubmit()">
+      <div class="form-group">
+        <label for="username">Username:</label>
+        <input type="text" class="form-control" formControlName="username" id="username" autocomplete="off">
+        <div class="error" *ngIf="loginForm.controls['username'].hasError('required') && loginForm.controls['username'].touched">Username is required</div>
+      </div>
+      <div class="form-group">
+        <label for="pwd">Password:</label>
+        <input type="password" class="form-control" formControlName="password" id="pwd" autocomplete="off">
+        <div class="error" *ngIf="loginForm.controls['password'].hasError('required') && loginForm.controls['password'].touched">Password is required</div>
+      </div>
+      <button class="btn btn-success" style="margin-bottom: 20px; width:150px" [disabled]="loginForm.invalid">Login</button>
+      <div *ngIf="invalidLogin" class="error">
+        <div>Invalid credentials.</div>
+      </div>
+    </form>
+    <div>
+	    <button class="btn btn-info" style="margin-bottom: 5px; width:150px; padding: inherit;" (click)="forgotPassword()">Forgot password</button>
+	    <button class="btn btn-info" style="margin-bottom: 5px; width:150px; padding: inherit; margin-left: 5px;" (click)="forgotUsername()">Forgot username</button>
+	    <button class="btn btn-primary" style="margin-bottom: 5px; width:150px; padding: inherit; margin-left: 5px;" (click)="signIn()">Sign in</button>
+    </div>
+  </div>
+<!-- 
+  <div class="col-md-6 login-container" style="display: inherit; flex-direction: inherit; box-sizing: content-box;">
+  </div>
+ -->
+
+</div>
